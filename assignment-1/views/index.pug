@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  //img from canva.com
+  img.home-banner(src="/images/home-banner.png" class="img-fluid") 
+  .container
+    .row
+      .col-md-12
+        h1.home-heading Your one-stop shop for fashionable clothing.
+  .container.benefit
+    .row 
+      .col-md-4.col-sm-6.col-12
+        .card
+          //(https://www.freepik.com/icon/fast-delivery_12892245)
+          img.card-img-top.benefit-img(src="/images/fast-delivery.png") 
+          .card-body 
+            .card-text.benefit-text FAST DELIVERY
+      .col-md-4.col-sm-6.col-12
+        .card
+          //(https://www.freepik.com/icon/achievement_9375493)
+          img.card-img-top.benefit-img(src="/images/quality-assurance.png")
+          .card-body 
+            .card-text.benefit-text QUALITY ASSURANCE
+      .col-md-4.col-sm-6.col-12
+        .card
+          //(https://www.freepik.com/icon/support_9204374)
+          img.card-img-top.benefit-img(src="/images/customer-support.png")
+          .card-body 
+            .card-text.benefit-text CUSTOMER SUPPORT 24/7

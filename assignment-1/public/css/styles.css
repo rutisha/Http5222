@@ -1,0 +1,50 @@
+img {
+    width: 100%;
+}
+
+#footer p {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #92140c;
+    color: #fff !important;
+    margin: 0;
+}
+
+.navbar, .navbar-brand, .nav-link {
+    background-color: #92140c;
+    color: #fff !important;
+}
+
+.home-heading {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.benefit-img {
+    width: 60%;
+    align-self: center;
+    padding: 25px;
+}
+
+.benefit {
+    margin-bottom: 40px;
+}
+
+.benefit-text {
+    text-align: center;
+}
+
+.about {
+    margin-bottom: 30px;
+}
+
+.add-to-cart {
+    background-color: #92140c;
+    color: #fff;
+}
+
+.add-to-cart:hover {
+    color: #92140c;
+    background-color: #fff;
+    border: 1px solid #92140c;
+}

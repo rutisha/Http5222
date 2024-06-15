@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col-md-12
+        h1.home-heading Trending Products
+        .row
+          each product in products
+            .col-md-4.col-sm-6.col-12.mb-3
+              .card
+                img.card-img-top(src=product.image, alt=product.name)
+                .card-body
+                  h5.card-title #{product.name}
+                  p.card-text Price: $#{product.price}
+                  p.card-text Color: #{product.color}
+                  button.btn.add-to-cart Add to Cart

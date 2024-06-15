@@ -1,0 +1,46 @@
+//- doctype html
+//- html 
+//-   head 
+//-     meta(charset="utf-8")
+//-     title #{title} | Test website 
+//-     link(rel="stylesheet", href="/css/styles.css")
+//-   body
+//-     header#header 
+//-       div.header-content
+//-        h2#site-name
+//-         a(href="#") Test site
+//-     main#main
+//-       block layout-content
+//-     footer#footer 
+//-       p &copy; Copyright Assignment-1, 2024
+doctype html
+html
+  head
+    title Fabstyla
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='../css/styles.css')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js')
+    script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js')
+    script(src='../js/script.js')
+  body
+   header#header
+    nav.navbar.navbar-expand-lg.navbar-light
+      a.navbar-brand(href='/') Fabstyla
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      .collapse.navbar-collapse#navbarNav
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href='/') Home
+          li.nav-item
+            a.nav-link(href='/about') About
+          li.nav-item
+            a.nav-link(href='/products') Products
+          li.nav-item
+            a.nav-link(href='/admin/add') Admin
+   main#main
+    block content
+   footer#footer.navbar-light
+    p &copy; Copyright FabStyla, 2024
+    
