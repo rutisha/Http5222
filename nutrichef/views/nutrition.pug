@@ -1,0 +1,49 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/style.css')
+    body
+        header
+            nav
+                ul
+                    li: a(href='/') Home
+                    li: a(href='/recipes') Search Recipe
+                    li: a(href='/stores') Find Nearby Stores
+                    li: a(href='/about') About
+        main
+            h1 Nutrition Information
+            if nutrition.foods.length > 0
+                h2= nutrition.foods[0].food_name
+                ul.nutrition-list
+                    li
+                        strong Calories:
+                        span= nutrition.foods[0].nf_calories + ' kcal'
+                    li
+                        strong Sodium:
+                        span= nutrition.foods[0].nf_sodium + ' mg'
+                    li
+                        strong Total Fat:
+                        span= nutrition.foods[0].nf_total_fat + ' g'
+                    li
+                        strong Saturated Fat:
+                        span= nutrition.foods[0].nf_saturated_fat + ' g'
+                    li
+                        strong Cholesterol:
+                        span= nutrition.foods[0].nf_cholesterol + ' mg'
+                    li
+                        strong Carbohydrates:
+                        span= nutrition.foods[0].nf_total_carbohydrate + ' g'
+                    li
+                        strong Dietary Fiber:
+                        span= nutrition.foods[0].nf_dietary_fiber + ' g'
+                    li
+                        strong Sugars:
+                        span= nutrition.foods[0].nf_sugars + ' g'
+                    li
+                        strong Protein:
+                        span= nutrition.foods[0].nf_protein + ' g'
+            else
+                p No nutrition information available
+        footer
+            p &copy; 2024 NutriChef. All rights reserved.

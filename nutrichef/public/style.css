@@ -1,0 +1,396 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 1em;
+    text-align: center;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2em;
+}
+
+#welcome {
+    padding: 2em;
+    text-align: center;
+    background-image: url('/images/slider.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#welcome h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+#welcome p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+#welcome input[type="text"] {
+    padding: 0.5em;
+    width: 60%;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#welcome button {
+    padding: 0.5em 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#featured {
+    padding: 2em;
+    text-align: center;
+}
+
+#featured h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.recipe-card {
+    display: inline-block;
+    width: 28%;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.recipe-card h3 {
+    margin-top: 0;
+}
+#nutrition {
+    padding: 2em;
+    background-color: #e9ecef;
+    text-align: left;
+}
+
+#nutrition h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+#nutrition p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.nutrition-details {
+    margin-top: 2em;
+}
+
+.nutrition-details h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.nutrition-details ul {
+    list-style-type: disc;
+    padding-left: 2em;
+}
+
+.nutrition-details ul li {
+    margin-bottom: 0.5em;
+}
+
+.nutrition-details ul li strong {
+    display: inline-block;
+    width: 150px;
+}
+
+.nutrition-details a {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reviews {
+    padding: 2em;
+    text-align: center;
+}
+
+#reviews h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+#reviews p {
+    font-size: 1.2em;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+form {
+    margin-bottom: 2em;
+}
+
+input[type="text"] {
+    padding: 0.5em;
+    width: 60%;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 0.5em 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ul.recipe-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+li.recipe-item {
+    display: inline-block;
+    width: 28%;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.recipe-item h2 {
+    margin-top: 0;
+}
+
+.recipe-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+ul.nutrition-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+ul.nutrition-list li {
+    margin-bottom: 0.5em;
+}
+
+ul.nutrition-list strong {
+    display: inline-block;
+    width: 150px;
+}
+
+#search-stores {
+    padding: 2em;
+    text-align: center;
+    background-color: #e9ecef;
+}
+
+#search-stores h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+#search-stores form {
+    margin-bottom: 2em;
+}
+
+#search-stores label {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+#search-stores input[type="text"] {
+    padding: 0.5em;
+    width: 60%;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#search-stores button {
+    padding: 0.5em 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#store-results {
+    padding: 2em;
+    text-align: center;
+}
+
+#store-results h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.store-item {
+    display: inline-block;
+    width: 28%;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.store-item h3 {
+    margin-top: 0;
+}
+
+#reviews {
+    padding: 2em;
+    text-align: center;
+}
+
+#reviews h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.review-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.review-card {
+    display: flex;
+    align-items: center;
+    width: 27%;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-card i{
+    font-size: 2em;
+    color: #FFD700;
+    margin-right: 0.5em;
+}
+
+.review-card p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+#recipe-details {
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#recipe-details h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: #4CAF50;
+}
+
+#recipe-details img {
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.recipe-summary {
+    margin-bottom: 2em;
+    font-size: 1.2em;
+}
+
+.recipe-info {
+    margin-top: 2em;
+}
+
+.recipe-info h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #4CAF50;
+}
+
+.recipe-info ul {
+    list-style-type: disc;
+    padding-left: 1.5em;
+}
+
+.recipe-info li {
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+}
+
+.recipe-info p {
+    font-size: 1.2em;
+}
+
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
