@@ -1,17 +1,8 @@
-doctype html
-html
-    head
-        title= title
-        link(rel='stylesheet', href='/style.css')
-    body
-        header
-            nav
-                ul
-                    li: a(href='/') Home
-                    li: a(href='/recipes') Search Recipe
-                    li: a(href='/stores') Find Nearby Stores
-                    li: a(href='/about') About
-        main
+extends layout 
+
+block main-content
+    main
+        section#nutition-info
             h1 Nutrition Information
             if nutrition.foods.length > 0
                 h2= nutrition.foods[0].food_name
@@ -45,5 +36,4 @@ html
                         span= nutrition.foods[0].nf_protein + ' g'
             else
                 p No nutrition information available
-        footer
-            p &copy; 2024 NutriChef. All rights reserved.
+      

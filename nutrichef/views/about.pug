@@ -1,23 +1,14 @@
-doctype html
-html
-  head
-    title About Us
-    link(rel='stylesheet', href='/style.css')
-  body
-    header
-      nav
-        ul
-          li: a(href='/') Home
-          li: a(href='/recipes') Search Recipe
-          li: a(href='/stores') Find Nearby Stores
-          li: a(href='/about') About
-    main
-      section#about
-        h1 About NutriChef
-        p Welcome to NutriChef!! Our mission is to help you discover healthy and delicious recipes that you can easily prepare at home.
-        p We believe that eating healthy should be enjoyable and accessible to everyone. Our platform provides a wide variety of recipes, nutrition information, and nearby store locations to help you find all the ingredients you need.
-        p Explore our website to find new recipes, check the nutrition facts, and locate stores near you. We are here to support your journey to a healthier lifestyle.
-        h2 Our Team
+extends layout 
+
+block main-content
+  main
+    section#about
+      h1 About NutriChef
+      p Welcome to NutriChef!! Our mission is to help you discover healthy and delicious recipes that you can easily prepare at home.
+      p We believe that eating healthy should be enjoyable and accessible to everyone. Our platform provides a wide variety of recipes, nutrition information, and nearby store locations to help you find all the ingredients you need.
+      p Explore our website to find new recipes, check the nutrition facts, and locate stores near you. We are here to support your journey to a healthier lifestyle.
+      h2 Our Team
+      div.team
         .team-member
           img(src='/images/team-member-1.png' alt='Team Member 1')
           h3 John Doe
@@ -31,5 +22,4 @@ html
           h3 Alex Brown
           p Lead Developer
 
-    footer
-      p &copy; 2024 NutriChef. All rights reserved.
+      

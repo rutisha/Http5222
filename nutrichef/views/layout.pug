@@ -1,0 +1,20 @@
+doctype html
+html
+    head
+        title NutriChef
+        link(rel='stylesheet', href='/style.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    body
+        header
+            .logo 
+                h1 NutriChef
+            nav
+                ul
+                    li: a(href='/') Home
+                    li: a(href='/recipes') Search Recipe
+                    li: a(href='/stores') Find Nearby Stores
+                    li: a(href='/about') About
+        main#main 
+            block main-content 
+        footer
+            p &copy; 2024 NutriChef. All rights reserved.

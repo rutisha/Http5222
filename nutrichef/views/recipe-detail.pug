@@ -1,28 +1,17 @@
-doctype html
-html
-    head
-        title= recipe.title
-        link(rel='stylesheet', href='/style.css')
-    body
-        header
-            nav
+extends layout 
+
+block main-content
+    main
+        section#recipe-details
+            h1= recipe.title
+            img(src=recipe.image, alt=recipe.title)
+            .recipe-summary
+                p!= recipe.summary
+            .recipe-info
+                h2 Ingredients
                 ul
-                    li: a(href='/') Home
-                    li: a(href='/recipes') Search Recipe
-                    li: a(href='/stores') Find Nearby Stores
-                    li: a(href='/about') About
-        main
-            section#recipe-details
-                h1= recipe.title
-                img(src=recipe.image, alt=recipe.title)
-                .recipe-summary
-                    p!= recipe.summary
-                .recipe-info
-                    h2 Ingredients
-                    ul
-                        each ingredient in recipe.extendedIngredients
-                            li= ingredient.original
-                    h2 Instructions
-                    p!= recipe.instructions
-        footer
-            p &copy; 2024 NutriChef. All rights reserved.
+                    each ingredient in recipe.extendedIngredients
+                        li= ingredient.original
+                h2 Instructions
+                p!= recipe.instructions
+        

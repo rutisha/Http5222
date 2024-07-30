@@ -1,41 +1,30 @@
-doctype html
-html
-  head
-    title Find Nearby Stores
-    link(rel='stylesheet', href='/style.css')
-  body
-    header
-      nav
-        ul
-          li: a(href='/') Home
-          li: a(href='/recipes') Search Recipe
-          li: a(href='/stores') Find Nearby Stores
-          li: a(href='/about') About
-    main
-      section#search-stores
-        h1 Find Nearby Stores
-        form(action="/stores" method="post")
-          label(for="location") Enter your location (e.g., city, postal code):
-          input(type="text" id="location" name="location" required)
-          button(type="submit") Search
+extends layout 
 
-      if stores
-        section#store-results
-          h2 Store Results
-          if stores.length
-            ul
-              each store in stores
-                li.store-item
-                  h3= store.name
-                  p= store.location.address
-                  if store.location.city
-                    p City: #{store.location.city}
-                  if store.location.state
-                    p State: #{store.location.state}
-                  if store.location.country
-                    p Country: #{store.location.country}
-          else
-            p No stores found for the given location.
+block main-content
+  main
+    section#search-stores
+      h1 Find Nearby Stores
+      form(action="/stores" method="post")
+        label(for="location") Enter your location (e.g., city, area):
+        input(type="text" id="location" name="location" required)
+        button(type="submit") Search
 
-    footer
-      p &copy; 2024 NutriChef. All rights reserved.
+    if stores
+      section#store-results
+        h2 Store Results
+        if stores.length
+          ul
+            each store in stores
+              li.store-item
+                h3= store.name
+                p= store.location.address
+                if store.location.city
+                  p City: #{store.location.city}
+                if store.location.state
+                  p State: #{store.location.state}
+                if store.location.country
+                  p Country: #{store.location.country}
+        else
+          p No stores found for the given location.
+
+    

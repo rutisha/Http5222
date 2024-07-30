@@ -1,9 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
 }
 
 header {
@@ -27,28 +25,25 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 1.2em;
 }
-
-main {
-    padding: 2em;
+nav ul li a:hover{
+    color: #FFD700;
 }
-
 #welcome {
     padding: 2em;
     text-align: center;
     background-image: url('/images/slider.jpg');
     background-size: cover;
     background-position: center;
+    height: 500px;
 }
 
 #welcome h1 {
-    font-size: 2.5em;
+    font-size: 3.5em;
     margin-bottom: 0.5em;
-}
-
-#welcome p {
-    font-size: 1.2em;
-    margin-bottom: 1em;
+    color: white;
+    padding-top: 180px;
 }
 
 #welcome input[type="text"] {
@@ -76,8 +71,23 @@ main {
 #featured h2 {
     font-size: 2em;
     margin-bottom: 1em;
+    color: #4CAF50;
 }
 
+#featured a{
+    background-color: #FFD700;
+    color: #fff;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+#featured a:hover {
+    background-color: #fff;
+    color: #FFD700;
+    border: 1px solid #FFD700;
+}
 .recipe-card {
     display: inline-block;
     width: 28%;
@@ -94,13 +104,16 @@ main {
 }
 #nutrition {
     padding: 2em;
-    background-color: #e9ecef;
+    margin: 2em;
+    border: 3px solid orange;
+    border-radius: 20px;
     text-align: left;
 }
 
 #nutrition h2 {
     font-size: 2em;
     margin-bottom: 1em;
+    color: #4CAF50;
 }
 
 #nutrition p {
@@ -150,6 +163,7 @@ main {
 #reviews h2 {
     font-size: 2em;
     margin-bottom: 1em;
+    color: #4CAF50;
 }
 
 #reviews p {
@@ -157,29 +171,38 @@ main {
 }
 
 h1 {
-    font-size: 2.5em;
+    margin: 0;
     margin-bottom: 0.5em;
+    text-align: center;
 }
 
 form {
     margin-bottom: 2em;
+    text-align: center;
 }
 
 input[type="text"] {
-    padding: 0.5em;
-    width: 60%;
+    padding: 1em;
+    width: 45%;
     margin-bottom: 1em;
     border: 1px solid #ccc;
     border-radius: 5px;
+    height: 15px;
+    margin-right: 20px;
 }
 
 button {
-    padding: 0.5em 1em;
+    padding: 1em 1em;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+button:hover {
+    background-color: #fff;
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
 }
 
 ul.recipe-list {
@@ -206,6 +229,7 @@ li.recipe-item {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -232,7 +256,7 @@ ul.nutrition-list strong {
 #search-stores {
     padding: 2em;
     text-align: center;
-    background-color: #e9ecef;
+    height: 450px;
 }
 
 #search-stores h1 {
@@ -251,20 +275,27 @@ ul.nutrition-list strong {
 }
 
 #search-stores input[type="text"] {
-    padding: 0.5em;
-    width: 60%;
+    padding: 1em;
+    width: 45%;
     margin-bottom: 1em;
     border: 1px solid #ccc;
     border-radius: 5px;
+    height: 15px;
+    margin-right: 20px;
 }
 
 #search-stores button {
-    padding: 0.5em 1em;
+    padding: 1em 1em;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+#search-stores button:hover {
+    background-color: #fff;
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
 }
 
 #store-results {
@@ -387,7 +418,60 @@ ul {
     font-size: 1.2em;
 }
 
-
+#view-recipe{
+    background-color: #FFD700;
+    color: #fff;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+#view-recipe:hover {
+    background-color: #fff;
+    border: 1px solid #FFD700;
+    color: #FFD700;
+}
+#view-info {
+    background-color: orange;
+    color: #fff;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+#view-info:hover {
+    background-color: #fff;
+    border: 1px solid orange;
+    color: orange;
+}
+.team {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
+#about {
+    margin: 2em;
+}
+#about h1{
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+#nutrition-info {
+    margin: 2em;
+}
+#recipes h1{
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+#about img{
+    width: 200px;
+    height: auto;
+}
 footer {
     background-color: #4CAF50;
     color: white;

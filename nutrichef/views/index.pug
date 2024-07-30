@@ -1,81 +1,67 @@
-doctype html
-html
-    head
-        title NutriChef
-        link(rel='stylesheet', href='/style.css')
-        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
-    body
-        header
-            nav
-                ul
-                    li: a(href='/') Home
-                    li: a(href='/recipes') Search Recipe
-                    li: a(href='/stores') Find Nearby Stores
-                    li: a(href='/about') About
-        main
-            section#welcome
-                h1 Welcome Text
-                p Welcome to the NutriChef!
-                img(src="/images/slider.jpg", alt='background')
-            section#featured
-                h2 Featured Recipes
-                each recipe in featuredRecipes
-                    .recipe-card
-                        h3= recipe.title
-                        img(src=recipe.image, alt=recipe.title)
-                        p Type: #{recipe.dishTypes.join(', ')}
-                a(href=`/recipes`) View All
-            section#nutrition
-                h2 Nutrition Information
-                p Our NutriChef not only helps you discover delicious recipes but also provides detailed nutritional information to support your healthy lifestyle. Whether you’re counting calories, tracking macros, or just wanting to know the nutritional value of your meals, we’ve got you covered.
-                .nutrition-details
-                    h3 Why Nutrition Matters
-                    p Eating a balanced diet is crucial for maintaining good health and wellbeing. Proper nutrition helps to:
-                    ul
-                        li Maintain a healthy weight
-                        li Reduce the risk of chronic diseases
-                        li Support overall growth and development
-                        li Boost energy levels and mood
-                        li Enhance mental clarity and focus
-                    h3 Key Nutritional Elements
-                    p Understanding the key elements of nutrition can help you make better food choices:
-                    ul
-                        li 
-                            strong Calories:
-                            |  Measure the amount of energy in food. 
-                        li 
-                            strong Macronutrients:
-                            |  Include proteins, fats, and carbohydrates, each playing a vital role in your body’s function.
-                        li 
-                            strong Micronutrients:
-                            |  Include vitamins and minerals, essential for various bodily processes.
-                        li 
-                            strong Fiber:
-                            |  Important for digestive health and can help maintain a healthy weight.
-                        li 
-                            strong Hydration:
-                            |  Staying hydrated is crucial for overall health. Water aids in digestion, absorption, and transportation of nutrients.
-                    h3 How to Use Our Nutrition Info
-                    p Our platform provides comprehensive nutritional data for each recipe, including:
-                    ul
-                        li Total calories
-                        li Breakdown of macronutrients (proteins, fats, carbohydrates)
-                        li Amounts of vitamins and minerals
-                        li Fiber content
-                        li Additional health tips and dietary information
-                    p To get started, simply search for a recipe and click on the nutrition details. This will help you make informed decisions and tailor your meals to your specific dietary needs.
-            section#reviews
-                h2 Reviews (Testimonials)
-                .review-cards
-                    .review-card
-                        i.fa.fa-star
-                        p "This website has the best healthy recipes! - John Doe"
-                    .review-card
-                        i.fa.fa-star
-                        p "I love the variety of recipes available. - Jane Smith"
-                    .review-card
-                        i.fa.fa-star
-                        p "Easy to use and healthy options. - Alex Brown"
+extends layout 
 
-        footer
-            p &copy; 2024 NutriChef. All rights reserved.
+block main-content
+    main
+        section#welcome
+            h1 Welcome to the NutriChef!
+        section#featured
+            h2 Featured Recipes
+            each recipe in featuredRecipes
+                .recipe-card
+                    h3= recipe.title
+                    img(src=recipe.image, alt=recipe.title)
+                    p Type: #{recipe.dishTypes.join(', ')}
+            a(href=`/recipes`) View All
+        section#nutrition
+            h2 Nutrition Information
+            p Our NutriChef not only helps you discover delicious recipes but also provides detailed nutritional information to support your healthy lifestyle. Whether you’re counting calories, tracking macros, or just wanting to know the nutritional value of your meals, we’ve got you covered.
+            .nutrition-details
+                h3 Why Nutrition Matters
+                p Eating a balanced diet is crucial for maintaining good health and wellbeing. Proper nutrition helps to:
+                ul
+                    li Maintain a healthy weight
+                    li Reduce the risk of chronic diseases
+                    li Support overall growth and development
+                    li Boost energy levels and mood
+                    li Enhance mental clarity and focus
+                h3 Key Nutritional Elements
+                p Understanding the key elements of nutrition can help you make better food choices:
+                ul
+                    li 
+                        strong Calories:
+                        |  Measure the amount of energy in food. 
+                    li 
+                        strong Macronutrients:
+                        |  Include proteins, fats, and carbohydrates, each playing a vital role in your body’s function.
+                    li 
+                        strong Micronutrients:
+                        |  Include vitamins and minerals, essential for various bodily processes.
+                    li 
+                        strong Fiber:
+                        |  Important for digestive health and can help maintain a healthy weight.
+                    li 
+                        strong Hydration:
+                        |  Staying hydrated is crucial for overall health. Water aids in digestion, absorption, and transportation of nutrients.
+                h3 How to Use Our Nutrition Info
+                p Our platform provides comprehensive nutritional data for each recipe, including:
+                ul
+                    li Total calories
+                    li Breakdown of macronutrients (proteins, fats, carbohydrates)
+                    li Amounts of vitamins and minerals
+                    li Fiber content
+                    li Additional health tips and dietary information
+                p To get started, simply search for a recipe and click on the nutrition details. This will help you make informed decisions and tailor your meals to your specific dietary needs.
+        section#reviews
+            h2 Reviews (Testimonials)
+            .review-cards
+                .review-card
+                    i.fa.fa-star
+                    p "This website has the best healthy recipes! - John Doe"
+                .review-card
+                    i.fa.fa-star
+                    p "I love the variety of recipes available. - Jane Smith"
+                .review-card
+                    i.fa.fa-star
+                    p "Easy to use and healthy options. - Alex Brown"
+
+   

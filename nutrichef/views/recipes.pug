@@ -1,17 +1,8 @@
-doctype html
-html
-    head
-        title= title
-        link(rel='stylesheet', href='/style.css')
-    body
-        header
-            nav
-                ul
-                    li: a(href='/') Home
-                    li: a(href='/recipes') Search Recipe
-                    li: a(href='/stores') Find Nearby Stores
-                    li: a(href='/about') About
-        main
+extends layout 
+
+block main-content
+    main
+        section#recipes
             h1 Recipes
             form(action='/recipes' method='get')
                 input(type='text' name='q' placeholder='Search recipes by ingredients' value=query)
@@ -22,9 +13,8 @@ html
                         li.recipe-item
                             h2= recipe.title
                             img(src=recipe.image, alt=recipe.title)
-                            a(href=`/recipe-detail/${recipe.id}`) View Recipe Details
-                            a(href=`/nutrition/${recipe.title}`) View Nutrition Info
+                            a#view-recipe(href=`/recipe-detail/${recipe.id}`) View Recipe Details
+                            a#view-info(href=`/nutrition/${recipe.title}`) View Nutrition Info
             else
                 p No recipes found.
-        footer
-            p &copy; 2024 NutriChef. All rights reserved.
+      
